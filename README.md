@@ -10,6 +10,12 @@
 
 ---
 
+<p align="center">
+  <img src="docs/screenshots/home.png" width="32%" alt="Home page">
+  <img src="docs/screenshots/level1-flip-match.png" width="32%" alt="Level 1: Flip-Match">
+  <img src="docs/screenshots/level2-sea-shells.png" width="32%" alt="Level 2: Sea Shells">
+</p>
+
 ## 🎮 Levels
 
 ### Level 1: Flip-Match Card Game 🃏
@@ -74,3 +80,11 @@ java -cp out seashellfinaalgame.HomePage
 ```
 
 Run it from the project root so the game can find the `assets/` folder.
+
+---
+
+<details>
+<summary>🇸🇦 ملخص بالعربي</summary>
+
+**SmartMe** تطبيق Java لتمرين الذاكرة، فيه مستويين: لعبة قلب البطاقات ومطابقتها، ولعبة الأصداف (تختار صدفة مختلفة كل جولة بدون ما تكرر). مشروع مادة هياكل البيانات، ومبني على فكرة الـ **Stack**.
+</details>
