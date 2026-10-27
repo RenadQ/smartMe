@@ -31,6 +31,21 @@ Nine shells are shuffled on the board every turn.
 - **About Us** page
 - Built with core data structures: a **stack** tracks the selected shells and a linked list stores player names
 
+## 🧩 Design
+
+The game was designed around the **stack** data structure (array-based and linked-list stacks) as part of a Data Structures course.
+
+<p align="center">
+  <img src="docs/images/sequence-diagram.png" width="70%" alt="Sequence diagram"><br>
+  <sub>Sequence diagram: player, game engine, stack and scoreboard</sub>
+</p>
+<p align="center">
+  <img src="docs/images/ui-wireframes.png" width="60%" alt="UI wireframes"><br>
+  <sub>UI wireframes</sub>
+</p>
+
+The full proposal is in [`docs/smartme-project-proposal.pdf`](docs/smartme-project-proposal.pdf). It covers the idea, how each stack operation is used (level setup, card matching, leaderboard), the architecture, UI and planned database schema.
+
 ## 📁 Project structure
 
 ```
@@ -41,6 +56,7 @@ Nine shells are shuffled on the board every turn.
 │   ├── ShellGame.java           # Level 2: sea shell memory game
 │   └── images/                  # Shell images (loaded from the classpath)
 ├── assets/                      # Card images, logo and icons
+├── docs/                        # Project proposal + design diagrams
 ├── nbproject/  build.xml  manifest.mf   # NetBeans project files
 └── README.md
 ```
