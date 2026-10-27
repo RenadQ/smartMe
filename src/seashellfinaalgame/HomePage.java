@@ -34,7 +34,7 @@ public class HomePage {
         frame.setLayout(new BorderLayout());
 
         // Create an ImageIcon with the SmartMe Logo image
-        ImageIcon logoIcon = new ImageIcon("smartme_logo.png");
+        ImageIcon logoIcon = new ImageIcon("assets/smartme_logo.png");
 
         // Create a JLabel to display the image
         JLabel logoLabel = new JLabel(logoIcon);
@@ -89,7 +89,7 @@ public class HomePage {
             // Check if the name exists in the stack
             String name = nameField.getText().trim();
             if (!name.isEmpty() && nameStack.contains(name)) {
-                JOptionPane.showMessageDialog(frame, "Welcome back, " + name + "!", "Welcome", JOptionPane.INFORMATION_MESSAGE, new ImageIcon("star_icon.png"));
+                JOptionPane.showMessageDialog(frame, "Welcome back, " + name + "!", "Welcome", JOptionPane.INFORMATION_MESSAGE, new ImageIcon("assets/star_icon.png"));
             }
 
             // Delay in milliseconds (adjust as needed)
@@ -118,7 +118,7 @@ aboutButton.addActionListener(new ActionListener() {
         // Check if the name exists in the stack
         String name = nameField.getText().trim();
         if (!name.isEmpty() && nameStack.contains(name)) {
-            JOptionPane.showMessageDialog(frame, "Welcome back, " + name + "!", "Welcome", JOptionPane.INFORMATION_MESSAGE, new ImageIcon("star_icon.png"));
+            JOptionPane.showMessageDialog(frame, "Welcome back, " + name + "!", "Welcome", JOptionPane.INFORMATION_MESSAGE, new ImageIcon("assets/star_icon.png"));
         }
 
         // Delay in milliseconds (adjust as needed)
@@ -214,7 +214,7 @@ private void showAboutUsPage() {
    frame.getContentPane().removeAll();
     frame.repaint();
 
-    ImageIcon logoIcon = new ImageIcon("smartme_logo.png");
+    ImageIcon logoIcon = new ImageIcon("assets/smartme_logo.png");
 
     // Create a JLabel to display the image
     JLabel logoLabel = new JLabel(logoIcon);
@@ -225,8 +225,7 @@ private void showAboutUsPage() {
     JPanel aboutPanel = new JPanel();
     aboutPanel.setLayout(new BorderLayout());
 
-    JTextArea aboutText = new JTextArea("We are SmartUr: Application Made By Many Students,\n Made To Help People Improving Their Memory Abilities\n by the SmartMe team 
- hope you like it :) ");
+    JTextArea aboutText = new JTextArea("We are SmartUr: Application Made By Many Students,\n Made To Help People Improving Their Memory Abilities\n by the SmartMe team \n hope you like it :) ");
     aboutText.setEditable(false);
     aboutText.setBackground(frame.getBackground());
     aboutText.setForeground(Color.BLUE);

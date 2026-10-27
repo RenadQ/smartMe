@@ -74,7 +74,7 @@ public class FlipMatchCardGame extends JFrame {
         elapsedTime = 0;
 
         for (int i = 1; i <= NUM_CARDS / 2; i++) {
-            ImageIcon image = new ImageIcon("pic" + i + ".png");
+            ImageIcon image = new ImageIcon("assets/pic" + i + ".png");
             cardImages.add(image);
             cardStack.push(image);
             cardImages.add(image);

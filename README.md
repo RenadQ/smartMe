@@ -1,46 +1,60 @@
-# SmartMe
-SmartMe is a Java-based card matching game designed to test players' memory skills. The game aims to provide an engaging and challenging experience by progressively increasing the difficulty level. Players are required to match cards based on their attributes, such as color, shape, or symbol, within a time limit.
+# 🧠 SmartMe: A Memory Puzzle Game
 
+<p align="center">
+  <img src="assets/smartme_logo.png" width="180" alt="SmartMe logo">
+</p>
 
+**SmartMe** is a Java desktop app that trains your memory through two mini-games. Enter your name, pick a level, and see how good your memory really is.
 
-# Game Logic Implementation:
-The game logic component is responsible for managing the core gameplay procedure. It includes functions such as generating cards, tracking the time, handling card selections and matches, and determining the game's outcome (win or lose). The following steps the implementation details of the game logic:
-A - Card Generation: The game logic generates a set of cards with various Characters pictures
-B- Timer: The game logic tracks the time elapsed from the start of the game. It updates the timer display on the game interface and checks if the time limit for each level has been exceeded.
-C- Card Selection: The player can select two cards at a time. The game logic should handle the selection, track the selected cards, and compare their attributes to determine if they are a match OR not .
-D- Matching Process: The game logic should include tools to compare the selected cards and determine if they match based on their pictures . If the cards match, they should be removed from the game board. Otherwise, they should be flipped back to their original state.
-E- Game Outcome: The game logic determines the outcome of the game, whether the player has won or lost. This can be based on factors such as successfully matching all the cards within the time limit.
+> Team project · Java Swing · Imam Abdulrahman Bin Faisal University (IAU)
 
-# Game Interface Design
+---
 
+## 🎮 Levels
 
-# Instructions for the game:
-1-flip match card: 
+### Level 1: Flip-Match Card Game 🃏
+Flip two cards at a time and find the matching pairs.
+- A match keeps the pair face up and earns **10 points**.
+- No match, and the cards flip back face down.
+- Match every pair within the **80-second** time limit to win.
 
-Game Instructions:
-Gameplay:
-Players take turns flipping over two cards at a time. If the two cards match (e.g., same symbol or color), the player keeps the pair and earns 10 points.
-They also get another turn. If the cards do not match, they are flipped back face down, and it becomes the next player's turn.
+### Level 2: Sea Shell Memory Game 🐚
+Nine shells are shuffled on the board every turn.
+- Pick a different shell each round, and never choose the same one twice.
+- Finish all rounds without repeating a choice and you win. Repeat a shell and it's game over!
 
-Winning:
-The game continues until all pairs have been matched or the 80-second time limit expires.
+## ✨ Features
 
-Rules:
-Time Limit: The entire game must be completed within 80 seconds.
-Have Fun!
+- Home page with player name entry and a **welcome back** message for returning players
+- Level selection with a short description of each game
+- Timer, scoring and win/lose messages
+- **About Us** page
+- Built with core data structures: a **stack** tracks the selected shells and a linked list stores player names
 
-2-sea shell game:
+## 📁 Project structure
 
-Gameplay:
-Players choose a random shell each turn, ensuring not to select the same one twice. 
-If all rounds are completed without repeating any choices, the player wins.
+```
+.
+├── src/seashellfinaalgame/
+│   ├── HomePage.java            # Main window: name entry, level selection, About Us
+│   ├── FlipMatchCardGame.java   # Level 1: card matching game
+│   ├── ShellGame.java           # Level 2: sea shell memory game
+│   └── images/                  # Shell images (loaded from the classpath)
+├── assets/                      # Card images, logo and icons
+├── nbproject/  build.xml  manifest.mf   # NetBeans project files
+└── README.md
+```
 
-Winning:
-Successfully completing all rounds without repeating any choices results in victory. However, if any choice is repeated during the game, it ends.
+## ▶️ How to run
 
-Have Fun!
+**NetBeans:** open the folder as a project and press **Run** (the main class is `HomePage`).
 
-Enjoy the challenge of matching pairs and testing your memory skills with SmartMe - A Memory Puzzle Game!
+**Command line** (Java 8+), from the project root:
 
+```bash
+javac -d out src/seashellfinaalgame/*.java
+cp -r src/seashellfinaalgame/images out/seashellfinaalgame/
+java -cp out seashellfinaalgame.HomePage
+```
 
-
+Run it from the project root so the game can find the `assets/` folder.
